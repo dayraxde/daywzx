@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te amooo</title>
+  <style>
+    body {
+      background-color: #FFC0CB;
+      background-image: url('https://www.transparenttextures.com/patterns/flower-power.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #FF69B4;
+      text-shadow: 2px 2px 4px #FF1493;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .envelope {
+      width: 350px;
+      height: 250px;
+      position: relative;
+      perspective: 1200px;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      background-color: #FFF;
+      border: 2px solid #FF6EB4;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: top;
+      transition: transform 1s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: rotateX(-180deg);
+    }
+
+    .inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      color: #FF1493;
+    }
+
+    .photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #FF6EB4;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(-10px); }
+      50% { transform: translateY(10px); }
+    }
+
+    .decorations {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .balloon {
+      position: absolute;
+      width: 50px;
+      height: 70px;
+      background: radial-gradient(circle, #FF69B4 0%, #FF1493 70%);
+      border-radius: 50%;
+      animation: rise 5s infinite ease-in-out;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(100vh); opacity: 1; }
+      100% { transform: translateY(-10vh); opacity: 0; }
+    }
+
+    .firework {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #FF69B4;
+      animation: explode 1s ease-out forwards;
+    }
+
+    .firework:nth-child(1) { left: 30%; animation-delay: 0.5s; }
+    .firework:nth-child(2) { left: 50%; animation-delay: 0.8s; }
+    .firework:nth-child(3) { left: 70%; animation-delay: 0.3s; }
+
+    @keyframes explode {
+      0% { transform: scale(0); opacity: 1; }
+      100% { transform: scale(5); opacity: 0; }
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #FF4500;
+      text-align: center;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #FF69B4;
+      font-weight: bold;
+    }
+
+    .phrases {
+      font-size: 1.2em;
+      color: #FF69B4;
+      text-align: center;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .interactive-message {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #FF1493;
+      color: #FFF;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      animation: bounceIn 2s ease-in-out infinite;
+    }
+
+    @keyframes bounceIn {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-30px); }
+      60% { transform: translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido a mi sorpresa especial, mi amor 💖 :333</h1>
+  <div class="envelope">
+    <div class="card">
+      <div class="inner">
+        <img src="xdd.jpg" alt="Nosotros" class="photo">
+        <div class="message">Te amoooo 🥰<br> Bueno es algo pequeño, pero me tomo bastante tiempo xdd.🎶</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phrases">
+    <p>"Me gustas, de esos que me hacen temblar el corazón cada vez que pienso en tu nombre."</p>
+    <p>"He visto toda la Vía Láctea y solo elegí tu estrella."</p>
+    <p>"Tú eres la alegría que saluda a mis ojos y el amor escondido en mi corazón. Cada vez que te veo, estoy obsesionada contigo."</p>
+  </div>
+
+  <div class="decorations">
+    <div class="balloon" style="left: 20%; animation-delay: 0s;"></div>
+    <div class="balloon" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="balloon" style="left: 80%; animation-delay: 1s;"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+  </div>
+
+  <div class="interactive-message">
+    Haz click aquí para más :333
+  </div>
+
+  <footer>
+    Bueno quise destacar dos musicas que me atrevi a escuchar y siento que me recuerda mucho a ti:
+    <ul>
+      <li><a href="https://youtu.be/8cKvvmPwgP4?si=j9BHrsR0qfobtPbj" target="_blank">Querer Querernos- Can</a></li>
+      <li><a href="https://youtu.be/sXR93C_bSVk?si=zba-qqIr1uvU6e7J" target="_blank">Vivo- Gustavito</a></li>
+      <li><a href="https://youtu.be/NK0JrQEWA-E?si=-3mYxwPKSrVZ29l2" target="_blank">Cuento - Ximee</a></li>
+      <li><a href="https://youtu.be/98Akpf1ph2o?si=iMG6LfJAuv8ZlGFE" target="_blank">Eres - Café Tacvba</a></li>
+      <li><a href="https://youtu.be/sDMxQF18yvA?si=veipjfHY0tsWOQGm" target="_blank">Chachachá - Jósean Log</a></li>
+      <li><a href="https://youtu.be/R5cbxTPZNL0?si=p-zni9y4mESuTWr-" target="_blank">Enamorado tuyo- Cuarteto de Nos </a></li>
+      <li><a href="https://youtu.be/--tHS9vUii0?si=a9ltFF_6p8qKlmhv" target="_blank">Locos - León Larregui</a></li>
+      <li><a href="https://youtu.be/D-3jesGZLd4?si=d_y45GjrGuf5oje7" target="_blank">Azul - Zoé </a></li>
+      <li><a href="https://youtu.be/QJ_nIbnRsqw?si=cVDOlHw-hYU0W6WC" target="_blank">Te quiero - Hombres g </a></li>
+      <li><a href="https://youtu.be/PUvuO7Vsi9E?si=2OYpi2ymBJoRiNVD" target="_blank">Manda Una Señal - Mana</a></li>
+      <li><a href="https://youtu.be/-9l5t3MWss8?si=jDHA0b175eHtm9id" target="_blank">Es Por Ti - Juanes</a></li>
+      <li><a href="https://youtu.be/4DO8GsIYfhQ?si=w0j48gx4OZNvk3-F" target="_blank">Cuando Me Enamoro - Enrique Iglesias, Juan Luis Guerra</a></li>
+      <li><a href="https://youtu.be/P61FN0qUmE0?si=9g1y1l3YM8Tc0uUg" target="_blank">Beginning Middle End - Leah Nobel </a></li>
+      <li><a href="https://youtu.be/mvHNk1IBCv4?si=W0AGg1KPo9CKcCEH" target="_blank">Lovers - Anna of the North </a></li>
+      <li><a href="https://youtu.be/RYr96YYEaZY?si=ASW1yPDFFwAu1kl9" target="_blank">Mi fav: Electric Love - BØRNS </a></li>
+      <li><a href="https://youtu.be/4d2I6SIs_bk?si=quMm0byDGWyPMlQm" target="_blank">Out of My League - Fitz and the Tantrums</a></li>
+      <li><a href="https://youtu.be/6cucosmPj-A?si=kxCDqUBcIfRY_ysJ" target="_blank">Every Breath You Take - The Police</a></li>
+      <li><a href="https://youtu.be/mGUjVbsYG6E?si=r8L3DJ1UalXyqIfN" target="_blank">No. 1 Party Anthem - Arctic Monkeys</a></li>
+      <li><a href="https://youtu.be/9wiEM0s4aCQ?si=TKMRPz25xopLq42-" target="_blank">Lover Is a Day - CUCO</a></li>
+      <li><a href="https://youtu.be/JoFkQ7iAQcw?si=vaxBblie5FYKgRST" target="_blank">Congratulations - Mac Miller</a></li>
+      <li><a href="https://youtu.be/mg11KUMxoww?si=TYmq9B2N2v2CuVbj" target="_blank">Yebba's Heartbreak - Dre'von the Fidler</a></li>
+      <li><a href="https://youtu.be/Jir-WItz1OI?si=MhxBCc-NeWtb5Rn0" target="_blank">Pretty Boy - The Neighbourhood </a></li>
+      <li><a href="https://youtu.be/2nY0spA5UL4?si=Y1_ykbTOkUEdWC4p" target="_blank">Snow Flower - V </a></li>
+      <li><a href="https://youtu.be/ctb9uuxJVHQ?si=ia-Tlqe2xZdMEL1Y" target="_blank">Algo contigo - Rita Payés</a></li>
+      <li><a href="https://youtu.be/U7rYj10RLOk?si=DzaIififj7-sH7pU" target="_blank">OMG esta tiene tu nombre y apellido: Primaveral - Mon Laferte </a></li>
+      <li><a href="https://youtu.be/9qO95PaCEaM?si=nC6cM0rGGPFWpvW4" target="_blank">Mi Corazón - Paté de Fuá</a></li>
+      <li><a href="https://youtu.be/HUlTzMipM0Q?si=mgJdZJnv55NEyGpX" target="_blank">morena - darviin</a></li>
+      <li><a href="https://youtu.be/IXMoZ_-9wJ0?si=FYfhsTqU21IE2UZZ" target="_blank">Besos, limón y miel - Santi Muk </a></li>
+      <li><a href="https://youtu.be/rigubwkGxdw?si=UyY_0h_8L6f4oKPf" target="_blank">La Que Me Gusta  - Los Amigos Invisibles</a></li>
+      <li><a href="https://youtu.be/T4hdylUvBkA?si=GcPUL9A_AvS_ecTD" target="_blank">Si Hay Algo - Jósean Log </a></li>
+      <li><a href="https://youtu.be/m0wPtYK8vxw?si=1Mxo7E6WefDEW5gq" target="_blank">Alguien Como Tú - Jósean Log</a></li>
+      <li><a href="https://youtu.be/aztH4_X-fNw?si=NONrqLpwqVx7hgeE" target="_blank">Magia - Gustavito</a></li>
+
+    </ul>
+  </footer>
+
+  <script>
+    const interactiveMessage = document.querySelector('.interactive-message');
+    interactiveMessage.addEventListener('click', () => {
+      alert('¡Amarte es como una vieja carta de amor. Tu nombre es el trazo que más conozco. (Fezliz cumpleaños amor de mi vida, tex extraño todos los dias) ;vvv');
+    });
+  </script>
+</body>
+</html>
